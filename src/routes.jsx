@@ -18,4 +18,9 @@ export const routes = createBrowserRouter([
         path:'/fidelizacion',
         element:<Fidelizacion />
     }
+    ,
+    {
+        path:'/blog',
+        element:<Blog />
+    }
 ]);
