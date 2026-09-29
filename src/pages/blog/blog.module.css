@@ -1,0 +1,106 @@
+:global(html) {
+    height: 100%;
+}
+
+:global(body) {
+    background-color: #f7f7f7;
+}
+
+.miClase {
+    background-color: #d1e231;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.miClase img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 100%;
+}
+
+.footer a {
+    color: #2e8b57;
+}
+
+.footerContenido {
+    background-color: #ffffff;
+}
+
+.paginaPrincipal {
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.paginaPrincipal h2 {
+    color: #333333;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contenedorCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+.card {
+    max-width: 380px;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card img {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.card h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 8px 0;
+    color: #333333;
+}
+
+.card a {
+    background-color: #2e8b57;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background-color 0.2s ease;
+}
+
+.card a:hover {
+    background-color: #246b43;
+    color: #ffffff;
+}
+
+/* Hover para dropdown en desktop */
+@media (min-width: 992px) {
+    :global(.nav-item.dropdown:hover .dropdown-menu) {
+        display: block;
+        margin-top: 0;
+    }
+}
