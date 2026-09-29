@@ -1,0 +1,54 @@
+:global(html) {
+    height: 100%;
+}
+
+:global(body) {
+    background-color: #f7f7f7;
+}
+
+.miClase {
+    background-color: #d1e231;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.miClase img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 100%;
+}
+
+.footer a {
+    color: #2e8b57;
+}
+
+.footerContenido {
+    background-color: #ffffff;
+}
+
+.descContacto {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.contenedorContacto {
+    width: 100%;
+}
+
+/* Hover para dropdown de Bootstrap en desktop */
+@media (min-width: 992px) {
+    :global(.nav-item.dropdown:hover .dropdown-menu) {
+        display: block;
+        margin-top: 0;
+    }
+}

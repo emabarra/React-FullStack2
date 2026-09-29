@@ -9,6 +9,10 @@ function Inicio() {
         navigate("/");
     }
 
+    function irContacto() {
+        navigate("/contacto");
+    }
+
     return (
         <>
             <header>
@@ -156,7 +160,7 @@ function Inicio() {
                     <a href="#"><i className="bi bi-instagram"></i> Instagram</a>
                     <a href="#"><i className="bi bi-tiktok"></i> Tiktok</a>
                     <a href="#"><i className="bi bi-facebook"></i> Facebook</a>
-                    <Link to="/contacto">
+                    <Link onClick={irContacto} to="/contacto">
                         <i className="bi bi-telephone-fill"></i> Contacto
                     </Link>
                 </div>
