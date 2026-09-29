@@ -15,6 +15,15 @@ function Fidelizacion() {
     function irInicio() {
         navigate("/");
     }
+    function irContacto() {
+        navigate("/contacto");
+    }
+    function irFidelizacion() {
+        navigate("/fidelizacion");
+    }
+    function irBlog() {
+        navigate("/blog");
+    }
 
     function enviar(e) {
         e.preventDefault();
