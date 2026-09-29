@@ -30,6 +30,10 @@
     background-color: #ffffff;
 }
 
+.formularioSection h1 {
+    color: #333333; /* O el tono oscuro de tu preferencia */
+}
+
 .formularioSection {
     padding: 3rem 0;
 }

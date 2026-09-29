@@ -8,6 +8,10 @@ function Contacto() {
         navigate("/");
     }
 
+    function irFidelizacion() {
+        navigate("/fidelizacion");
+    }
+
     return (
         <>
             <header>
@@ -39,7 +43,7 @@ function Contacto() {
                                     </button>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/fidelizacion">
+                                    <Link className="nav-link" to="fidelizacion">
                                         Fidelización
                                     </Link>
                                 </li>

@@ -13,6 +13,10 @@ function Inicio() {
         navigate("/contacto");
     }
 
+    function irFidelizacion() {
+        navigate("/fidelizacion");
+    }
+
     return (
         <>
             <header>
@@ -46,7 +50,7 @@ function Inicio() {
                                     </button>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/fidelizacion">
+                                    <Link className="nav-link" to="fidelizacion">
                                         Fidelización
                                     </Link>
                                 </li>
