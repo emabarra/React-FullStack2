@@ -114,7 +114,7 @@ function Fidelizacion() {
                                     </a>
                                     <ul className="dropdown-menu">
                                         <li>
-                                            <Link className="dropdown-item" to="/fruta-fresca">
+                                            <Link className="dropdown-item" to="/frutafresca">
                                                 Frutas Frescas
                                             </Link>
                                         </li>
