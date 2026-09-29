@@ -4,12 +4,18 @@ import styles from "./inicio.module.css";
 function Inicio() {
     const navigate = useNavigate();
 
+    // Función para navegar programáticamente al inicio (root "/")
+    function irInicio() {
+        navigate("/");
+    }
+
     return (
         <>
             <header>
                 <nav className={`navbar navbar-expand-lg ${styles.miClase}`}>
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/">
+                        {/* Puedes usar el click para llamar a irInicio o dejar el Link con to="/" */}
+                        <Link className="navbar-brand" to="/" onClick={irInicio}>
                             <img src="/imagenes/Code_Generated_Image.png" alt="Huerto Hogar" />
                         </Link>
                         <button
@@ -26,9 +32,14 @@ function Inicio() {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/">
+                                    {/* Icono de la casa configurado con la función irInicio */}
+                                    <button 
+                                        className="nav-link active btn btn-link p-0 border-0" 
+                                        onClick={irInicio}
+                                        aria-current="page"
+                                    >
                                         <i className="bi bi-house-door-fill"></i>
-                                    </Link>
+                                    </button>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/fidelizacion">
