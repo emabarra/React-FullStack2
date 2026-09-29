@@ -12,4 +12,9 @@ export const routes = createBrowserRouter([
         path:'/contacto',
         element:<Contacto/>
     }
+    ,
+    {
+        path:'/fidelizacion',
+        element:<Fidelizacion/>
+    }
 ]);
