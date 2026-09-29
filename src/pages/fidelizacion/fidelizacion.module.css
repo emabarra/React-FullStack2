@@ -1,0 +1,48 @@
+:global(html) {
+    height: 100%;
+}
+
+:global(body) {
+    background-color: #f7f7f7;
+}
+
+.miClase {
+    background-color: #d1e231;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.miClase img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 100%;
+}
+
+.footer a {
+    color: #2e8b57;
+}
+
+.footerContenido {
+    background-color: #ffffff;
+}
+
+.formularioSection {
+    padding: 3rem 0;
+}
+
+.contenedorBtn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Hover para dropdown en desktop */
+@media (min-width: 992px) {
+    :global(.nav-item.dropdown:hover .dropdown-menu) {
+        display: block;
+        margin-top: 0;
+    }
+}
