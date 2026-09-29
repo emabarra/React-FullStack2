@@ -3,6 +3,7 @@ import Inicio from "./pages/inicio/inicio";
 import Contacto from "./pages/contacto/contacto";
 import Fidelizacion from "./pages/fidelizacion/Fidelizacion";
 import Blog from "./pages/blog/blog";
+import Tiendas from "./pages/tiendas/tiendas";
 
 export const routes = createBrowserRouter([
     {
