@@ -8,16 +8,12 @@ function Contacto() {
         navigate("/");
     }
 
-    function irFidelizacion() {
-        navigate("/fidelizacion");
-    }
-
     return (
         <>
             <header>
                 <nav className={`navbar navbar-expand-lg ${styles.miClase}`}>
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/" onClick={irInicio}>
+                        <Link className="navbar-brand" to="/">
                             <img src="/imagenes/Code_Generated_Image.png" alt="Huerto Hogar" />
                         </Link>
                         <button
@@ -43,7 +39,7 @@ function Contacto() {
                                     </button>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="fidelizacion">
+                                    <Link className="nav-link" to="/fidelizacion">
                                         Fidelización
                                     </Link>
                                 </li>
