@@ -4,7 +4,7 @@ import Contacto from "./pages/contacto/contacto";
 import Fidelizacion from "./pages/fidelizacion/Fidelizacion";
 import Blog from "./pages/blog/blog";
 import Tiendas from "./pages/tiendas/tiendas";
-import Frutafresca from "./pages/productos/frutafresca";
+import Frutafresca from "./pages/frutafresca/frutafresca.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -33,7 +33,7 @@ export const routes = createBrowserRouter([
     }
     ,
     {
-        path:"/frutafresca/:idFruta",
+        path:"/frutafresca",
         element:<Frutafresca />
     }
 ]);
