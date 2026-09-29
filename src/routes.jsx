@@ -24,4 +24,9 @@ export const routes = createBrowserRouter([
         path:'/blog',
         element:<Blog />
     }
+    ,
+    {
+        path:'/tiendas',
+        element:<Tiendas />
+    }
 ]);
