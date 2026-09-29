@@ -33,7 +33,7 @@ export const routes = createBrowserRouter([
     }
     ,
     {
-        path:"/fruta-fresca/:idFruta",
+        path:"/frutafresca/:idFruta",
         element:<Frutafresca />
     }
 ]);
