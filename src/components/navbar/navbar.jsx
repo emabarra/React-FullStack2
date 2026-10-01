@@ -85,7 +85,7 @@ function Navbar_tienda() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to="/productos-organicos">
+                                        <Link className="dropdown-item" to="/productosorganicos">
                                             Productos Orgánicos
                                         </Link>
                                     </li>
