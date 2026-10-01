@@ -90,7 +90,7 @@ function Navbar_tienda() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to="/productos-lacteos">
+                                        <Link className="dropdown-item" to="/productoslacteos">
                                             Productos Lácteos
                                         </Link>
                                     </li>
