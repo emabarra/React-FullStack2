@@ -6,6 +6,7 @@ import Blog from "./pages/blog/blog";
 import Tiendas from "./pages/tiendas/tiendas";
 import Frutafresca from "./pages/frutafresca/frutafresca.jsx";
 import VerdurasOrganica from "./pages/verduraorganica/verduraorganica.jsx";
+import ProductosOrganicos from "./pages/productosorganicos/productosorganicoss";
 
 export const routes = createBrowserRouter([
     {
@@ -40,5 +41,10 @@ export const routes = createBrowserRouter([
     {
         path:"/verduraorganica",
         element:<VerdurasOrganica/>
+    }
+    ,
+    {
+        path:'/productosorganicos',
+        element:<ProductosOrganicos/>
     }
 ]);
