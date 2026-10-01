@@ -1,152 +1,40 @@
-:global(html) {
-    height: 100%;
-}
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import styles from "./productoslacteos.module.css";
 
-:global(body) {
-    background-color: #f7f7f7;
-}
+const LLAVE_CARRITO = "carrito";
 
-.miClase {
-    background-color: #d1e231;
-    font-family: 'Montserrat', sans-serif;
-}
+function ProductosLacteos(){
+    const navigate = useNavigate();
 
-.miClase img {
-    width: 70px;
-    height: 70px;
-}
+    const productos = [
+        {
+            id: "PL001",
+            nombre: "Yogurt",
+            precio: 2500,
+            stock: 25,
+            descripcion:
+                "Nacido en el corazón del campo chileno, este yogur rústico rescata la autenticidad del campo en cada cucharada. Elaborado artesanalmente con leche entera y fresca de vacas criadas en libre pastoreo, destaca por su textura espesa, cremosa y ese toque ácido tan característico de las recetas de antes. Sin conservantes, espesantes ni procesos industriales: solo fermentos naturales, paciencia y el sabor puro de la naturaleza.",
+            imagen: "/imagenes/yogurt.jpg",
+        },
+        {
+            id: "PL002",
+            nombre: "Queso Gauda Artesanal",
+            precio: 8900,
+            stock: 45,
+            descripcion:
+                "Queso Gauda de elaboración artesanal, madurado a la perfección en cavas climatizadas. Ideal para sándwiches, tablas de queso o fundir. De textura semi-dura y sabor suave con un ligero toque a nuez.",
+            imagen: "/imagenes/quesillo.jpg",
+        },
+        {
+            id: "PL003",
+            nombre: "Mantequilla de Campo",
+            precio: 4500,
+            stock: 70,
+            descripcion:
+                "Mantequilla tradicional batida a partir de crema fresca, con un toque de sal de mar. Ideal para untar en pan amasado, repostería y salteados. Reconocida por su color amarillo intenso y sabor auténtico a campo.",
+            imagen: "/imagenes/mantequilla.jpg",
+        }
 
-.footer {
-    background-color: #ffffff;
-    padding: 25px;
-    width: 100%;
-}
-
-.footer a {
-    color: #2e8b57;
-}
-
-.footerContenido {
-    background-color: #ffffff;
-}
-
-.descProducto {
-    padding: 2rem 1rem;
-}
-
-.contenedorDesc {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contenedorDesc h2 {
-    color: #333333;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* Sección Carrito de Compras */
-.seccionCarrito {
-    max-width: 800px;
-    margin: 1rem auto 2rem auto;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e0e0e0;
-}
-
-.seccionCarrito h2 {
-    font-size: 1.5rem;
-    color: #333333;
-    margin-bottom: 1rem;
-}
-
-.listaCarrito {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1rem;
-}
-
-.itemCarrito {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.totalCarrito {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2e8b57;
-}
-
-/* Catálogo de Productos */
-.contenedorCard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-}
-
-.card {
-    max-width: 380px;
-    width: 100%;
-    min-height: 520px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.card img {
-    width: 100%;
-    max-width: 280px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 10px 0;
-}
-
-.card h3 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin: 8px 0;
-    color: #333333;
-}
-
-.precioStock {
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: #2e8b57;
-    margin: 2px 0;
-}
-
-.card p {
-    font-size: 0.9rem;
-    text-align: center;
-    color: #666666;
-}
-
-.contenedorBtn {
-    margin-top: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-/* Submenú hover en pantallas grandes */
-@media (min-width: 992px) {
-    :global(.nav-item.dropdown:hover .dropdown-menu) {
-        display: block;
-        margin-top: 0;
-    }
+    ];
 }
