@@ -93,7 +93,89 @@ function ProductosLacteos(){
 
     return(
         <>
+            <Navbar_tienda />
+            <main>
+                <section className={styles.descProducto}>
+                    <div className={styles.contenedorDesc}>
+                        <h2>Productos Lácteos</h2>
+                        <p>
+                            Los productos lácteos de HuertoHogar provienen de granjas locales que se dedican a la producción
+                            responsable y de calidad. Ofrecemos una gama de leches, yogures y otros derivados que conservan su
+                            frescura y sabor auténtico. Ricos en calcio y nutrientes esenciales, nuestros lácteos son perfectos
+                            para complementar una dieta equilibrada.
+                        </p>
+                    </div>
+                </section>
 
+                {/* Vista del Carrito */}
+                <section className={styles.seccionCarrito}>
+                    <h2>Carrito de Compras</h2>
+                    {carrito.length === 0 ? (
+                        <p className="text-muted">El carrito está vacío.</p>
+                    ) : (
+                        <ul className={styles.listaCarrito}>
+                            {carrito.map((item, index) => (
+                                <li key={index} className={styles.itemCarrito}>
+                                    <span>
+                                        {item.nombre} - ${ (item.precioCalculado || item.precio || item.precioPorKg || item.precioPor500g || 0).toLocaleString() }
+                                    </span>
+                                    <button
+                                        className="btn btn-sm btn-outline-danger"
+                                        onClick={() => eliminarDelCarrito(index)}
+                                    >
+                                        Eliminar
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+
+                    <p className={styles.totalCarrito}>Total: ${total.toLocaleString()}</p>
+
+                    <button className="btn btn-success" onClick={finalizarCompra}>
+                        Finalizar compra
+                    </button>
+
+                    {mensajeCompra && <div className="mt-3 text-success fw-bold">{mensajeCompra}</div>}
+                </section>
+
+                {/* Grilla de Productos */}
+                <section>
+                    <div className={styles.contenedorCard}>
+                        {productos.map((prod) => (
+                            <div key={prod.id} className={styles.card}>
+                                <h3>{prod.nombre}</h3>
+                                <img src={prod.imagen} alt={prod.nombre} />
+                                <p className={styles.precioStock}>Precio: ${prod.precio.toLocaleString()}</p>
+                                <p className={styles.precioStock}>Stock: {prod.stock} unidades de 500g</p>
+                                <p>{prod.descripcion}</p>
+                                <div className={styles.contenedorBtn}>
+                                    <button
+                                        className="btn btn-success"
+                                        onClick={() => agregarAlCarrito(prod)}
+                                    >
+                                        Agregar al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </main>
+
+            <footer className={styles.footer}>
+                <div className={styles.footerContenido}>
+                    <p>&copy; Sitio web realizado por YZ spa - Versión 1.0</p>
+                    <a href="#"><i className="bi bi-instagram"></i> Instagram</a>{" "}
+                    <a href="#"><i className="bi bi-tiktok"></i> Tiktok</a>{" "}
+                    <a href="#"><i className="bi bi-facebook"></i> Facebook</a>{" "}
+                    <Link to="/contacto">
+                        <i className="bi bi-telephone-fill"></i> Contacto
+                    </Link>
+                </div>
+            </footer>
         </>
     );
 }
+
+export default ProductosLacteos;
