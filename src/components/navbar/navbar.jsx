@@ -80,7 +80,7 @@ function Navbar_tienda() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to="/verduras-organicas">
+                                        <Link className="dropdown-item" to="/verduraorganica">
                                             Verduras Orgánicas
                                         </Link>
                                     </li>

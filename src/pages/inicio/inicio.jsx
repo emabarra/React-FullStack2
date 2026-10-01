@@ -24,7 +24,7 @@ function Inicio() {
 
     return (
         <>
-            <Navbar_tienda/>
+        <Navbar_tienda/>
             <main>
                 <section className={styles.banner}>
                     <div className="container">

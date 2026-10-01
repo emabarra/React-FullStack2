@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+}
+
+.container-fluid p {
+    color: #333333;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.miClase {
+    background-color: #d1e231;
+    font-family: 'Montserrat';
+}
+
+.miClase img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer {
+    background-color: #FFFFFF;
+}
+
+.footer a {
+    color: #2e8b57;
+}
+
+.footerContenido {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+.card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card {
+    max-width: 380px;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.card p {
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.contenedorCard {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contenedorDesc {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.seccionCarrito {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.contenedorBtn {
+    margin-top: auto;
+}
+
+.seccionCarrito h2,
+.contenedorDesc h2,
+.tituloProducto {
+    color: #212529 !important;
+    font-weight: bold;
+}
+
+.card {
+    max-width: 380px;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.card h3, 
+.card p, 
+.card strong {
+    color: #333333 !important;
+    text-align: center;
+}
+
+.tituloProducto {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.precioStock {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.descripcion {
+    font-size: 0.85rem;
+    color: #666666 !important;
+    margin-top: 8px;
+}

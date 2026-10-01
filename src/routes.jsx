@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Inicio from "./pages/inicio/inicio";
 import Contacto from "./pages/contacto/contacto";
-import Fidelizacion from "./pages/fidelizacion/Fidelizacion";
+import Fidelizacion from "./pages/fidelizacion/fidelizacion";
 import Blog from "./pages/blog/blog";
 import Tiendas from "./pages/tiendas/tiendas";
 import Frutafresca from "./pages/frutafresca/frutafresca.jsx";
+import VerdurasOrganica from "./pages/verduraorganica/verduraorganica.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -35,5 +36,9 @@ export const routes = createBrowserRouter([
     {
         path:"/frutafresca",
         element:<Frutafresca />
+    },
+    {
+        path:"/verduraorganica",
+        element:<VerdurasOrganica/>
     }
 ]);
