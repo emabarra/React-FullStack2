@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import styles from "./productosOrganicos.module.css";
+import styles from "./productosorganicos.module.css";
 import Navbar_tienda from "../../components/navbar/navbar";
 
 const LLAVE_CARRITO = "carrito";
