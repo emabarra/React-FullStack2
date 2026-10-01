@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import styles from "./productoslacteos.module.css";
+import Navbar_tienda from "../../components/navbar/navbar";
 
 const LLAVE_CARRITO = "carrito";
 
@@ -37,4 +38,62 @@ function ProductosLacteos(){
         }
 
     ];
+
+    const [carrito, setCarrito] = useState([]);
+    const [mensajeCompra, setMensajeCompra] = useState("");
+
+    useEffect(() => {
+        const storageActual = localStorage.getItem(LLAVE_CARRITO);
+        if (storageActual) {
+            try {
+                setCarrito(JSON.parse(storageActual));
+            } catch (error) {
+                setCarrito([]);
+            }
+        }
+    }, []);
+
+    const guardarYActualizarCarrito = (nuevoCarrito) => {
+        setCarrito(nuevoCarrito);
+        localStorage.setItem(LLAVE_CARRITO, JSON.stringify(nuevoCarrito));
+    };
+
+    function agregarAlCarrito(producto) {
+        const itemParaCarrito = {
+            ...producto,
+            precioCalculado: producto.precio,
+        };
+        const nuevoCarrito = [...carrito, itemParaCarrito];
+        guardarYActualizarCarrito(nuevoCarrito);
+        setMensajeCompra("");
+    }
+
+    function eliminarDelCarrito(indexEliminar) {
+        const nuevoCarrito = carrito.filter((_, index) => index !== indexEliminar);
+        guardarYActualizarCarrito(nuevoCarrito);
+    }
+
+    function finalizarCompra() {
+        if (carrito.length === 0) {
+            alert("El carrito está vacío.");
+            return;
+        }
+
+        setMensajeCompra("¡Gracias por tu compra! Tu pedido ha sido procesado exitosamente.");
+        guardarYActualizarCarrito([]);
+    }
+    const total = carrito.reduce(
+        (sum, item) => sum + (item.precioCalculado || item.precio || item.precioPorKg || item.precioPor500g || 0),
+        0
+    );
+
+    function irInicio() {
+        navigate("/");
+    }
+
+    return(
+        <>
+
+        </>
+    );
 }
