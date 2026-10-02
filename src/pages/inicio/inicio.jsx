@@ -5,7 +5,6 @@ import Navbar_tienda from "../../components/navbar/navbar";
 function Inicio() {
     const navigate = useNavigate();
 
-    // Función para navegar programáticamente al inicio (root "/")
     function irInicio() {
         navigate("/");
     }

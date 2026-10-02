@@ -32,7 +32,6 @@ function ProductosOrganicos() {
     const [carrito, setCarrito] = useState([]);
     const [mensajeCompra, setMensajeCompra] = useState("");
 
-    // Cargar el carrito guardado al iniciar el componente
     useEffect(() => {
         const storageActual = localStorage.getItem(LLAVE_CARRITO);
         if (storageActual) {
@@ -44,17 +43,14 @@ function ProductosOrganicos() {
         }
     }, []);
 
-    // Guardar en localStorage cada vez que cambie el carrito
     const guardarYActualizarCarrito = (nuevoCarrito) => {
         setCarrito(nuevoCarrito);
         localStorage.setItem(LLAVE_CARRITO, JSON.stringify(nuevoCarrito));
     };
 
     function agregarAlCarrito(producto) {
-        // Formateamos el objeto para que coincida con la estructura del carrito (usada en otras páginas)
         const itemParaCarrito = {
             ...producto,
-            // Guardamos el precio bajo un nombre genérico o específico para calcular el total
             precioCalculado: producto.precioPor500g 
         };
         const nuevoCarrito = [...carrito, itemParaCarrito];
@@ -77,7 +73,6 @@ function ProductosOrganicos() {
         guardarYActualizarCarrito([]);
     }
 
-    // El cálculo del total verifica 'precioCalculado' (de orgánicos) o 'precioPorKg' (de frutas)
     const total = carrito.reduce((sum, item) => sum + (item.precioCalculado || item.precioPorKg || 0), 0);
 
     function irInicio() {
@@ -101,7 +96,6 @@ function ProductosOrganicos() {
                     </div>
                 </section>
 
-                {/* Sección Carrito (Unificada y sincronizada con localStorage) */}
                 <section className={styles.seccionCarrito}>
                     <h2>Carrito de Compras</h2>
                     {carrito.length === 0 ? (
@@ -133,7 +127,6 @@ function ProductosOrganicos() {
                     {mensajeCompra && <div className="mt-3 text-success fw-bold">{mensajeCompra}</div>}
                 </section>
 
-                {/* Catálogo de Productos Orgánicos */}
                 <section>
                     <div className={styles.contenedorCard}>
                         {productos.map((prod) => (

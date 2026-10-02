@@ -7,18 +7,15 @@ import App_alert from "../../components/alert/alert";
 const LLAVE_STORAGE = "usuarios";
 
 function Fidelizacion() {
-    // Estados adaptados al patrón txt[Campo]
     const [txtNombre, setTxtNombre] = useState("");
     const [txtApellido, setTxtApellido] = useState("");
     const [txtCorreo, setTxtCorreo] = useState("");
     const [txtTelefono, setTxtTelefono] = useState("");
 
-    // Estados de alerta
     const [showAlert, setShowAlert] = useState(false);
     const [msgAlert, setMsgAlert] = useState("");
     const [disenoAlert, setDisenoAlert] = useState("primary");
 
-    // Función de validación para campos de texto
     function validarTexto(valor, campo) {
         if (valor.trim().length === 0) {
             setDisenoAlert("danger");
@@ -35,7 +32,6 @@ function Fidelizacion() {
         return false;
     }
 
-    // Función de validación específica para teléfono
     function validarTelefono(valor, campo) {
         if (valor.trim().length === 0) {
             setDisenoAlert("danger");
@@ -52,7 +48,6 @@ function Fidelizacion() {
         return false;
     }
 
-    // Función guardar con la lógica paso a paso
     function guardar() {
         if (validarTexto(txtNombre, "nombre") === true) {
             return;
@@ -82,7 +77,6 @@ function Fidelizacion() {
             setMsgAlert("Formulario enviado exitosamente");
             setShowAlert(true);
 
-            // Limpiar formulario
             setTxtNombre("");
             setTxtApellido("");
             setTxtCorreo("");
@@ -92,13 +86,13 @@ function Fidelizacion() {
 
     return (
         <>
+            <Navbar_tienda />
             <App_alert
                 mostrarAlerta={showAlert}
                 cerrarAlerta={() => setShowAlert(false)}
                 variant={disenoAlert}
                 msg={msgAlert}
             />
-            <Navbar_tienda />
 
             <main>
                 <section id="formulario" className={styles.formularioSection}>

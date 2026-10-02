@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import styles from "./frutaFresca.module.css";
 import Navbar_tienda from "../../components/navbar/navbar";
+import App_alert from "../../components/alert/alert";
 
 const LLAVE_CARRITO = "carrito";
 
@@ -58,8 +59,10 @@ function FrutasFrescas() {
 
     const [carrito, setCarrito] = useState([]);
     const [mensajeCompra, setMensajeCompra] = useState("");
+    const [showAlert,setShowAlert] = useState(false);
+    const [msgAlert, setMsgAlert] = useState("");
+    const [disenoAlert, setDisenoAlert] = useState("primary");
 
-    // Cargar el carrito guardado al iniciar el componente
     useEffect(() => {
         const storageActual = localStorage.getItem(LLAVE_CARRITO);
         if (storageActual) {
@@ -71,7 +74,6 @@ function FrutasFrescas() {
         }
     }, []);
 
-    // Guardar en localStorage cada vez que cambie el carrito
     const guardarYActualizarCarrito = (nuevoCarrito) => {
         setCarrito(nuevoCarrito);
         localStorage.setItem(LLAVE_CARRITO, JSON.stringify(nuevoCarrito));
@@ -90,8 +92,10 @@ function FrutasFrescas() {
 
     function finalizarCompra() {
         if (carrito.length === 0) {
-            alert("El carrito está vacío.");
-            return;
+            setDisenoAlert("warning");
+            setMsgAlert("El carrrito no debe estar vacio.");
+            setShowAlert(true);
+            return true;
         }
 
         setMensajeCompra("¡Gracias por tu compra! Tu pedido ha sido procesado exitosamente.");
@@ -107,6 +111,7 @@ function FrutasFrescas() {
     return (
         <>
         <Navbar_tienda/>
+        <App_alert mostrarAlerta={showAlert} cerrarAlerta={() => setShowAlert(false)} variant={disenoAlert} msg={msgAlert}/>
             <main>
                 <section className={styles.descProducto}>
                     <div className={styles.contenedorDesc}>
