@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import styles from "./productosorganicos.module.css";
 import Navbar_tienda from "../../components/navbar/navbar";
+import App_alert from "../../components/alert/alert";
 
 const LLAVE_CARRITO = "carrito";
 
@@ -31,6 +32,10 @@ function ProductosOrganicos() {
 
     const [carrito, setCarrito] = useState([]);
     const [mensajeCompra, setMensajeCompra] = useState("");
+
+    const [showAlert,setShowAlert] = useState(false);
+    const [msgAlert, setMsgAlert] = useState("");
+    const [disenoAlert, setDisenoAlert] = useState("primary");
 
     useEffect(() => {
         const storageActual = localStorage.getItem(LLAVE_CARRITO);
@@ -65,8 +70,10 @@ function ProductosOrganicos() {
 
     function finalizarCompra() {
         if (carrito.length === 0) {
-            alert("El carrito está vacío.");
-            return;
+            setDisenoAlert("warning");
+            setMsgAlert("El carrito no debe estar vacio.");
+            setShowAlert(true);
+            return true;
         }
 
         setMensajeCompra("¡Gracias por tu compra! Tu pedido ha sido procesado exitosamente.");
@@ -82,6 +89,8 @@ function ProductosOrganicos() {
     return (
         <>  
             <Navbar_tienda />
+            <App_alert mostrarAlerta={showAlert} cerrarAlerta={() => setShowAlert(false)} variant={disenoAlert} msg={msgAlert}/>
+
             <main>
                 <section className={styles.descProducto}>
                     <div className={styles.contenedorDesc}>
