@@ -8,6 +8,7 @@ import Frutafresca from "./pages/frutafresca/frutafresca.jsx";
 import VerdurasOrganica from "./pages/verduraorganica/verduraorganica.jsx";
 import ProductosOrganicos from "./pages/productosorganicos/productosorganicos.jsx";
 import ProductosLacteos from "./pages/productoslacteos/productoslacteos.jsx";
+import Admin from "./pages/admin/admin.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -52,5 +53,10 @@ export const routes = createBrowserRouter([
     {
         path:"/productoslacteos",
         element:<ProductosLacteos/>
+    },
+    {
+        path:"/admin",
+        element:<Admin/>
     }
+
 ]);
