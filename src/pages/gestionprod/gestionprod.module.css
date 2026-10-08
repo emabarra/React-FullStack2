@@ -1,0 +1,55 @@
+:global(html) {
+    height: 100%;
+}
+
+:global(body) {
+    background-color: #f7f7f7;
+}
+
+.miClase {
+    background-color: #d1e231;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+    padding: 25px;
+    width: 100%;
+    background-color: #f7f7f7;
+    margin-top: auto;
+}
+
+.footerContenido {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #f7f7f7;
+}
+
+.footerNav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footerNav a {
+    color: #2e8b57;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footerNav a:hover {
+    color: #1b5233;
+}
+
+/* Hover para dropdown en desktop */
+@media (min-width: 992px) {
+    :global(.nav-item.dropdown:hover .dropdown-menu) {
+        display: block;
+        margin-top: 0;
+    }
+}
