@@ -13,6 +13,7 @@ import GestionProductos from "./pages/gestionprod/gestionprod.jsx";
 import GestionUsuarios from "./pages/gestionuser/gestionuser.jsx";
 import Login from "./pages/login/login.jsx";
 import OlvidoContra from "./pages/olvidoContra/olvidoContra.jsx";
+import Registrarse from "./pages/registrarse/registrarse.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -78,6 +79,10 @@ export const routes = createBrowserRouter([
     {
         path:"/olvidoContra",
         element:<OlvidoContra/>
+    },
+    {
+        path:"/registrarse",
+        element:<Registrarse/>
     }
 
 ]);
