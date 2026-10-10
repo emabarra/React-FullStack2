@@ -40,7 +40,7 @@ function Navbar_Admin(){
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/gestion-usuarios">
+                  <Link className="nav-link" to="/gestionuser">
                     <i className="bi bi-people me-1"></i>Gestión de Usuarios
                   </Link>
                 </li>

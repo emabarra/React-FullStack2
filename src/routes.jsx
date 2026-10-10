@@ -10,6 +10,7 @@ import ProductosOrganicos from "./pages/productosorganicos/productosorganicos.js
 import ProductosLacteos from "./pages/productoslacteos/productoslacteos.jsx";
 import Admin from "./pages/admin/admin.jsx";
 import GestionProductos from "./pages/gestionprod/gestionprod.jsx";
+import GestionUsuarios from "./pages/gestionuser/gestionuser.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -62,6 +63,11 @@ export const routes = createBrowserRouter([
     {
         path:"/gestionprod",
         element:<GestionProductos/>
+    },
+    {
+        path:"/gestionuser",
+        element:<GestionUsuarios/>
+        
     }
 
 ]);
