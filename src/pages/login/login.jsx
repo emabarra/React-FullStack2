@@ -25,7 +25,7 @@ function Login() {
         if (txtUsuario === "usuario" && txtContrasena === "1234") {
             navigate("/perfil-usuario");
         } else if (txtUsuario === "admin" && txtContrasena === "1234") {
-            navigate("/perfil-admin");
+            navigate("/admin");
         } else {
             setDisenoAlert("danger");
             setMsgAlert("Contraseña o Usuario Incorrecto.");
@@ -45,11 +45,9 @@ function Login() {
 
             <main className={styles.loginContainer}>
                 <div className={styles.formCard}>
-                    <img
-                        src="/imagenes/user_84308.png"
-                        alt="usuario-imagen"
-                        className={styles.userImg}
-                    />
+                    <div className="mb-3">
+                        <i className="bi bi-person-circle display-3 text-success"></i>
+                    </div>
 
                     <label htmlFor="usuario" className={styles.label}>
                         Usuario
@@ -82,7 +80,7 @@ function Login() {
                     <Link to="/" className={styles.link}>
                         Volver
                     </Link>
-                    <Link to="/olvido-contrasena" className={styles.link}>
+                    <Link to="/olvidoContra" className={styles.link}>
                         ¿Olvidaste tu contraseña?
                     </Link>
                     <Link to="/registrarse" className={styles.link}>
