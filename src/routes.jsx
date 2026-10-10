@@ -11,6 +11,7 @@ import ProductosLacteos from "./pages/productoslacteos/productoslacteos.jsx";
 import Admin from "./pages/admin/admin.jsx";
 import GestionProductos from "./pages/gestionprod/gestionprod.jsx";
 import GestionUsuarios from "./pages/gestionuser/gestionuser.jsx";
+import Login from "./pages/login/login.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -68,6 +69,10 @@ export const routes = createBrowserRouter([
         path:"/gestionuser",
         element:<GestionUsuarios/>
         
+    },
+    {
+        path:"/login",
+        element:<Login/>
     }
 
 ]);
