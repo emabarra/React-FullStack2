@@ -1,15 +1,19 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import Frutafresca from './frutafresca';
 import { MemoryRouter } from 'react-router-dom';
 
 describe('App', () => {
-    it('renderiza sin errores', () => {
+    it('validar componente <a> de Instagram en el footer', () => {
         render(
             <MemoryRouter>
                 <Frutafresca />
             </MemoryRouter>
         );
-        expect(document.body).toBeInTheDocument();
+        const instagramLink = screen.getByRole('link', { name: /Instagram/i });
+
+        expect(instagramLink).toBeInTheDocument();
+
+        expect(instagramLink).toHaveAttribute('href', '#');
     });
 });
