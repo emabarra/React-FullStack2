@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import ProductosOrganicos from './productosorganicos';
 import { MemoryRouter } from 'react-router-dom';
@@ -10,6 +10,10 @@ describe('App', () => {
                 <ProductosOrganicos />
             </MemoryRouter>
         );
-        expect(document.body).toBeInTheDocument();
+        
+        const paragrafo = screen.getByText(/Nuestros productos orgánicos están elaborados/i);
+
+        expect(paragrafo).toBeInTheDocument();
+        expect(paragrafo.tagName).toBe('P');
     });
 });
