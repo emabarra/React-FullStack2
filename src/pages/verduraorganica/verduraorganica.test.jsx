@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import VerdurasOrganica from './verduraorganica';
 import { MemoryRouter } from 'react-router-dom';
@@ -10,6 +10,8 @@ describe('App', () => {
                 <VerdurasOrganica />
             </MemoryRouter>
         );
-        expect(document.body).toBeInTheDocument();
+        
+        const verdurasH2 = screen.getByRole('heading', { level: 2, name: /Verduras Orgánicas/i });
+        expect(verdurasH2).toBeInTheDocument();
     });
 });
