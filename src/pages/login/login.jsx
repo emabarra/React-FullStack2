@@ -23,7 +23,7 @@ function Login() {
         }
 
         if (txtUsuario === "usuario" && txtContrasena === "1234") {
-            navigate("/perfil-usuario");
+            navigate("/perfilusuario");
         } else if (txtUsuario === "admin" && txtContrasena === "1234") {
             navigate("/admin");
         } else {
