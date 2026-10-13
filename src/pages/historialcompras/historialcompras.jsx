@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./historialCompras.module.css";
 import Navbar_Usuario from "../../components/navbarUsuario/navbarUsuario";
+import SelectRegionComuna from "../../components/selectRegionComuna/selectRegionComuna";
 
 function HistorialCompras() {
   const [compras] = useState([
