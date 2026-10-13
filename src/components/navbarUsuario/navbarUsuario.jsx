@@ -2,13 +2,29 @@ import { useNavigate, Link } from "react-router-dom";
 import styles from "./navbarUsuario.module.css"
 
 function Navbar_Usuario(){
+
+  const navigate = useNavigate();
+    // Función para navegar programáticamente al inicio (root "/")
+    function irInicio() {
+        navigate("/");
+    }
+
+    function irPerfilUsuario() {
+        navigate("/perfilusuario");
+    }
+
+    function irHistorialCompras() {
+        navigate("/historialcompras");
+    }
+
     return(
+      
         
 
      <header>
         <nav className={`navbar navbar-expand-lg ${styles.miClase}`}>
           <div className="container-fluid">
-            <Link className="navbar-brand fw-bold" to="/perfil-usuario">
+            <Link className="navbar-brand fw-bold" to="/perfilusuario">
               Menú Usuario
             </Link>
             <button
@@ -30,7 +46,7 @@ function Navbar_Usuario(){
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/historial-compras">
+                  <Link className="nav-link" to="/historialcompras">
                     <i className="bi bi-boxes me-1"></i>Historial de compras
                   </Link>
                 </li>
