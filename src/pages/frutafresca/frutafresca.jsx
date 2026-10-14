@@ -93,7 +93,7 @@ function FrutasFrescas() {
     function finalizarCompra() {
         if (carrito.length === 0) {
             setDisenoAlert("warning");
-            setMsgAlert("El carrrito no debe estar vacio.");
+            setMsgAlert("El carrito no debe estar vacio.");
             setShowAlert(true);
             return true;
         }
