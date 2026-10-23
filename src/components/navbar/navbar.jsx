@@ -1,13 +1,10 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-import styles from "./navbar.module.css"
-
-
+import styles from "./navbar.module.css";
 
 function Navbar_tienda() {
-
     const navigate = useNavigate();
-    // Función para navegar programáticamente al inicio (root "/")
+
     function irInicio() {
         navigate("/");
     }
@@ -63,6 +60,12 @@ function Navbar_tienda() {
                                     Blog
                                 </Link>
                             </li>
+                            {/* NUEVO ENLACE DE RESEÑAS */}
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/resenas">
+                                    Reseñas
+                                </Link>
+                            </li>
                             <li className="nav-item dropdown">
                                 <a
                                     className="nav-link dropdown-toggle"
@@ -114,7 +117,7 @@ function Navbar_tienda() {
                 </div>
             </nav>
         </header>
-    )
+    );
 }
 
-export default Navbar_tienda
+export default Navbar_tienda;
