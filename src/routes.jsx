@@ -16,6 +16,7 @@ import OlvidoContra from "./pages/olvidoContra/olvidoContra.jsx";
 import Registrarse from "./pages/registrarse/registrarse.jsx";
 import PerfilUsuario from "./pages/perfilusuario/perfilusuario.jsx";
 import HistorialCompras from "./pages/historialcompras/historialcompras.jsx";
+import Reseñas from "./pages/reseñas/resenñs.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -93,6 +94,10 @@ export const routes = createBrowserRouter([
     {
         path:"/historialcompras",
         element:<HistorialCompras/>
+    },
+    {
+        path:"/reseñas",
+        element:<Reseñas/>
     }
 
 ]);
